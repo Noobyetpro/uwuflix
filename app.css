@@ -201,6 +201,7 @@ nav .btn-sm:last-child {
     width: 250px;
     position: relative;
     filter: grayscale(1);
+    margin-right: 80px; /*this is a bad way to do it*/
 }
 
 .showcase-second .twins {
@@ -229,6 +230,10 @@ nav .btn-sm:last-child {
     opacity: 0.7;
     backdrop-filter: blur(1px);
     border-radius: 10px;
+}
+
+.showcase-fourth .screen {
+    margin-right: 80px; /*this is a bad way to do it*/
 }
 
 .faq-container {
@@ -395,6 +400,7 @@ footer .creds {
 
     .showcase-second .screen {
         width: 250px;
+        margin-right: 0; /*this is a bad way to do it*/
     }
 
     .showcase-third .screen {
@@ -410,6 +416,7 @@ footer .creds {
 
     .showcase-fourth .screen {
         width: 250px;
+        margin-right: 0; /*this is a bad way to do it*/
     }
 
     .showcase .text {
