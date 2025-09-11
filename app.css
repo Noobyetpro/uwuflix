@@ -47,7 +47,7 @@ hr {
 
 h1 {
     font-size: 48px;
-    font-weight: 700;
+    font-weight: 900;
 }
 
 h3 {
@@ -61,11 +61,11 @@ h3 {
 
 .main {
     /* height: 644px; */
-    min-height: 75vh;
-    background-image: url("./assets/images/bg.jpg");
+    min-height: 80vh;
+    background-image: url("./assets/images/bg.webp");
     background-position: center 40%; 
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:auto;
     /* background-size: 100vw; */
     position: relative;
 }
@@ -79,7 +79,7 @@ h3 {
     top: 0;
 }
 
-.main nav {
+nav {
     display: flex;
     width: 65vw;
     height: 100px;  
@@ -90,7 +90,7 @@ h3 {
     z-index: 2;
 }
 
-.main nav img {
+nav img {
     width: 200px;
 }
 
@@ -115,7 +115,7 @@ h3 {
     font-weight: 700;
 }
 
-.main nav .btn-sm:last-child {
+nav .btn-sm:last-child {
     background-color: #DC143C;
 }
 
@@ -172,7 +172,7 @@ h3 {
     gap: 25px;
     position: relative;
     padding: 25px 0;
-    height: 500px;
+    min-height: 500px;
 }
 
 .showcase h1 {
@@ -183,10 +183,9 @@ h3 {
     position: relative;
 }
 
-.showcase-first .screenshow .screen {
+.showcase-first .screen {
     width: 555px;
     position: relative;
-    padding-left: 25px;
     z-index: 10;
 }
 
@@ -194,41 +193,39 @@ h3 {
     width: 555px;
     position: absolute;
     top: 71px;
-    left: -60px;
+    left: -84px;
     border: none;
-
 }
 
-.showcase-second .screenshow .screen {
-    width: 400px;
+.showcase-second .screen {
+    width: 250px;
     position: relative;
     filter: grayscale(1);
 }
 
-.showcase-second .screenshow .twins {
-    width: 205px;
-    height: 205px;
+.showcase-second .twins {
     position: absolute;
-    top: 158px;
-    left: 106px;
+    top: 88px;
+    left: 47px;
+    width: 170px;
+    height: 170px;
     border-radius: 50%;
     opacity: 0.9;
     backdrop-filter: blur(50px);
 }
 
-
-.showcase-third .screenshow .screen {
+.showcase-third .screen {
     position: relative;
-    width: 720px;
+    width: 400px;
     filter: grayscale(1);
 }
 
-.showcase-third .screenshow .gif {
-    width: 380px;
-    height: 200px;
+.showcase-third .gif {
     position: absolute;
-    top: 68px;
-    left: 115px;
+    top: 23px;
+    left: 46px;
+    width: 243px;
+    height: 175px;
     opacity: 0.7;
     backdrop-filter: blur(1px);
     border-radius: 10px;
@@ -244,7 +241,7 @@ h3 {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    padding: 30px;
+    padding: 50px;
 }
 
 .faq ul li {
@@ -265,46 +262,164 @@ h3 {
 
 .faq-container h1 {
     text-align: center;
-    margin: 50px 0;
+    margin: 50px 0 0;
 }
 
 .faq li {
     list-style: none;
 }
 
+footer {
+    padding: 50px;
+    width: 60vw;
+    /* border: 1px solid white; */
+    margin: 0 auto;
+}
+
+footer p {
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: #DC143C;
+    text-decoration: none;
+    transition: color 300ms ease-in;
+}
+
+footer a:hover {
+    color: #F75270;
+}
+
+.links ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    justify-content: center;
+    gap: 10px;
+}
+
+.links ul li {
+    list-style: none;
+}
+
+footer .creds {
+    margin: 50px 0 0;
+    font-weight: 900;
+}
+
 @media screen and (max-width: 1300px) {
 
 
-    .main nav img {
-        width: 100px;
+    nav img {
+        width: 200px;
     }
 
-    .main nav {
-        width: 100vw;
+    nav {
         padding: 20px;
         justify-content: space-between;
-    }
-
-    .main nav .btn {
-        padding: 10px 15px;
-        margin-left: 5px;
+        width: 100vw;
     }
 
     .main .input-form {
         flex-direction: column;
     }
 
-    /* section {
-        flex-direction: column;
-        gap: 50px;
-        padding: 40px 0;
-        text-align: center;
+    .hero {
+        margin-top: 120px;
+        padding-bottom: 50px;
     }
 
-    section img {
-        border-left: none;
-        border-top: 1px solid #fdebd02a;
-        width: 400px;
-    } */
-
+    .showcase {
+        flex-wrap: wrap;
+        padding: 50px 20px;
+    }
 }
+
+@media screen and (max-width: 1000px) {
+
+    .showcase {
+        flex-direction: column;
+        /* text-align: center; */
+        width: 100vw;
+    }
+
+    .faq ul li {
+        width: 90vw;
+    }
+
+    .links ul {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    html {
+        font-size: 10px;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .hero > :nth-child(2) {
+        font-size: 20px;
+    }
+
+    .hero > :nth-child(3) {
+        font-size: 14px;
+    }
+
+    nav img {
+        width: 100px;
+    }
+
+
+    .showcase-first .screen {
+        width: 350px;
+    }
+
+    .showcase-first .gif {
+        width: 350px;
+        width: 297px;
+        top: 58px;
+        left: -37px;
+    }
+
+    .showcase-second .screen {
+        width: 250px;
+    }
+
+    .showcase-third .screen {
+        width: 250px;
+    }
+
+    .showcase-third .gif {
+        top: 23px;
+        left: 41px;
+        width: 130px;
+        height: 100px;
+    }
+
+    .showcase-fourth .screen {
+        width: 250px;
+    }
+
+    .showcase .text {
+        width: 80%;
+    }
+
+    footer {
+        width: 100vw;
+    }
+}
+
+/* breaking around 665px wide responsive mode*/
+/* Works fine for tabs */
